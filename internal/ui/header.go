@@ -1,27 +1,15 @@
 package ui
 
-import (
-	"fmt"
-
-	"github.com/charmbracelet/lipgloss"
-)
+import "github.com/fatih/color"
 
 func PrintHeader() {
-	logo := `
-   ███████╗ ██████╗ ███████╗████████╗ ██████╗██╗     ██╗
-   ██╔════╝██╔═══██╗██╔════╝╚══██╔══╝██╔═══██╗██║     ██║
-   █████╗  ██║   ██║███████╗   ██║   ██║   ██║██║     ██║
-   ██╔══╝  ██║   ██║╚════██║   ██║   ██║   ██║██║     ██║
-   ███████╗╚██████╔╝███████║   ██║   ╚██████╔╝███████╗███████╗
-   ╚══════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚══════╝╚══════╝
-
-                      SoftCLI - Ferramenta oficial da Softcom
-`
-	style := lipgloss.NewStyle().
-		Foreground(lipgloss.Color("#00BCD4")).
-		Bold(true).
-		PaddingTop(1).
-		PaddingBottom(1)
-
-	fmt.Println(style.Render(logo))
+	color.Cyan(`
+   _____        __ _    _____ _      _____ 
+  / ____|      / _| |  / ____| |    |_   _|
+ | (___   ___ | |_| |_| |    | |      | |  
+  \___ \ / _ \|  _| __| |    | |      | |  
+  ____) | (_) | | | |_| |____| |____ _| |_ 
+ |_____/ \___/|_|  \__|\_____|______|_____|          
+        SoftLogger - Backup SQL
+	`)
 }
